@@ -1,4 +1,4 @@
-# Comments
+# Comments for Readwise
 
 A basic Manifest v2 extension for sending Hacker News comments to Readwise as "tweets"
 

@@ -1,11 +1,19 @@
-(function () {
+(async function () {
   READWISE_TOKEN = ""
 
-  chrome.storage.sync.get(['token'], function(result) {
-    READWISE_TOKEN = result.token
-  });
+  function getTokenFromStorage() {
+    return new Promise(resolve => {
+      chrome.storage.sync.get('token', resolve);
+    })
+  }
 
-  if (READWISE_TOKEN === "") return
+  const storage = await getTokenFromStorage()
+  READWISE_TOKEN = storage.token
+
+  if (READWISE_TOKEN === "") {
+    console.error("Your Readwise token is not set. Please configure it in the options page of the Comments to Readwise extension.")
+    return
+  }
 
   COMMENT_TREE = {}
 
@@ -22,7 +30,7 @@
           "title": SUBMISSION_TITLE,
           "author": `${SUBMISSION_AUTHOR} on Hacker News`,
           "source_url": window.location.href,
-          "source_type": "CommentsForReadwise",
+          "source_type": "CommentsToReadwise",
           "category": "tweets",
           "note": `Comment by ${username}`,
           "highlight_url": `https://news.ycombinator.com/item?id=${item.id}`

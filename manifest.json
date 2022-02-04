@@ -3,11 +3,19 @@
   "manifest_version": 3,
   "description": "Allows you to save comments to Readwise as it says on the tin",
   "version": "1.0.0",
-  "homepage_url": "https://github.com/marcus-crane/readwise-comments",
+  "homepage_url": "https://github.com/marcus-crane/comments-to-readwise",
+  "options_page": "options.html",
+  "permissions": [
+    "storage"
+  ],
   "content_scripts": [
     {
-      "matches": ["*://news.ycombinator.com/item?id=*"],
-      "js": ["script.js"]
+      "matches": [
+        "*://news.ycombinator.com/item?id=*"
+      ],
+      "js": [
+        "script.js"
+      ]
     }
   ],
   "host_permissions": [

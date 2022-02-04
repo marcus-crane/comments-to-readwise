@@ -1,6 +1,12 @@
 (function () {
   READWISE_TOKEN = ""
 
+  chrome.storage.sync.get(['token'], function(result) {
+    READWISE_TOKEN = result.token
+  });
+
+  if (READWISE_TOKEN === "") return
+
   COMMENT_TREE = {}
 
   SUBMISSION_TITLE = document.querySelector("td.title a").innerText

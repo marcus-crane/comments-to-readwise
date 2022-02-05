@@ -2,9 +2,9 @@
 
 ![](./example.png)
 
-A basic Manifest v3 extension for sending Hacker News comments to Readwise as "tweets"
+A basic Manifest v3 extension for sending Hacker News and Reddit (old.reddit.com only) comments to Readwise as "tweets"
 
-At the moment, it's only hardcoded to work with HN but deally I'll support a bunch more sources like [Lobsters](https://lobste.rs).
+Ideally I'll support a bunch more sources in future.
 
 Readwise will hopefully just a "comments" category down the line instead of abusing "tweets" but it works for now.
 
@@ -20,6 +20,6 @@ Once your token is saved, you should see the "Save to Readwise" button appear ov
 
 ## Current issues
 
-At present, the extension only runs on the initial comment page for a news story.
+At present, the extension only runs on the initial comment page for a submission.
 
 It won't work if you go to the direct link for a comment, such that the original story and author isn't visible on the page.

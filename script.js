@@ -136,8 +136,8 @@
         }
       })
       .then(data => {
-        if (data.id) return // succesfully uploaded, no need to check for errors
-        if (data.text === "Ensure this field has no more than 8191 characters.") {
+        if (data[0].id) return // succesfully uploaded, no need to check for errors
+        if (data[0].text[0] === "Ensure this field has no more than 8191 characters.") {
           changeButtonText(comment_id, "comment is too long to save!")
         } else {
           changeButtonText(comment_id, "failed to save to readwise")

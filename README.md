@@ -1,5 +1,7 @@
 # Comments to Readwise
 
+> [Install from the Chrome Web Store](https://chrome.google.com/webstore/detail/mbpckcijlikkkakedodgpgkdmgbdogmp)
+
 ![](./example.png)
 
 A basic Manifest v3 extension for sending Hacker News and Reddit (old.reddit.com only) comments to Readwise as "tweets"

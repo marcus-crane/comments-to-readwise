@@ -2,7 +2,7 @@
 
 > [Install from the Chrome Web Store](https://chrome.google.com/webstore/detail/mbpckcijlikkkakedodgpgkdmgbdogmp)
 
-![](./example.png)
+![](./docs/example.png)
 
 A basic Manifest v3 extension for sending Hacker News and Reddit (old.reddit.com only) comments to Readwise as "tweets"
 
@@ -16,9 +16,22 @@ Once installed, you need to navigate to the extension settings and configure you
 
 This gets persisted to your Chrome storage so your token should sync across browser instances.
 
-![](./settings.png)
+![](./docs/settings.png)
 
 Once your token is saved, you should see the "Save to Readwise" button appear over Hacker News comments
+
+## Development
+
+This plugin uses Vite to build the plugin from Typescript files.
+
+There are only a couple of steps to build a development bundle:
+
+```bash
+$ pnpm install # yarn or npm if you prefer, i use pnpm
+$ pnpm run dev
+```
+
+Once done, you should have a `dist` folder that you can load into Chrome / Chromium browsers as an "Unpacked extension"
 
 ## Current issues
 

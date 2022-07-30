@@ -1,0 +1,17 @@
+{
+  "name": "comments-to-readwise",
+  "description": "Allows you to save comments to Readwise as it says on the tin",
+  "version": "1.0.1",
+  "scripts": {
+    "dev": "vite build --mode development",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "author": "Marcus Crane <marcus@utf9k.net>",
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^1.0.13",
+    "@types/chrome": "^0.0.193",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.4"
+  }
+}

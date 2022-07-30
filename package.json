@@ -1,7 +1,7 @@
 {
   "name": "comments-to-readwise",
   "description": "Allows you to save comments to Readwise as it says on the tin",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "scripts": {
     "dev": "vite build --mode development",
     "build": "vite build",

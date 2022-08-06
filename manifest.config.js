@@ -32,6 +32,8 @@ export default defineManifest(async (config, env) => {
     content_scripts: [
       {
         matches: [
+          "*://github.com/*/*/issues/*",
+          "*://github.com/*/*/pull/*",
           "*://news.ycombinator.com/item?id=*",
           "*://old.reddit.com/r/*/comments/*"
         ],
@@ -41,6 +43,8 @@ export default defineManifest(async (config, env) => {
       }
     ],
     host_permissions: [
+      "*://github.com/*/*/issues/*",
+      "*://github.com/*/*/pull/*",
       "*://news.ycombinator.com/item?id=*",
       "*://old.reddit.com/r/*/comments/*"
     ]

@@ -1,14 +1,9 @@
+import { SiteDefinition } from '../../types'
+
+import { definition as github } from './github'
 import { definition as hackerNews } from './hacker-news'
 
-export type SiteDefinition = Record<string, SiteMethods>
-
-export type SiteMethods = {
-  name: string;
-  activate: Function,
-  retrieveParentContext: Function
-}
-
 export const siteDefinitions: SiteDefinition = {
+  ...github,
   ...hackerNews,
 }
-

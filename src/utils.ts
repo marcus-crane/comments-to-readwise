@@ -1,14 +1,16 @@
 import { C2R_CATEGORY, C2R_SOURCE_TYPE, C2R_USERAGENT, READWISE_HIGHLIGHTS_ENDPOINT } from "./constants";
 import { HighlightFragment, ReadwisePayload } from "./types";
 
-import showdown from 'showdown'
+import TurndownService from "turndown";
+import { gfm } from 'turndown-plugin-gfm';
 
-const converter = new showdown.Converter()
+const turndownService = new TurndownService({})
+turndownService.use(gfm)
 
 export function htmlToText(htmlString: string) {
   const tempDiv = document.createElement("div")
   tempDiv.innerHTML = htmlString
-  return converter.makeMarkdown(tempDiv.innerHTML);
+  return turndownService.turndown(tempDiv);
 }
 
 export async function sendToReadwise(highlight: HighlightFragment): Promise<boolean> {

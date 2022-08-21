@@ -15,7 +15,7 @@ function activate(): void {
             const commentDropdown = entry.querySelector(".details-overlay .dropdown-menu-sw")
             console.log(entry)
             if (commentDropdown === null) return
-            commentDropdown.insertAdjacentElement("afterbegin", createGithubButton(entry.getAttribute('data-gid')))
+            commentDropdown.insertAdjacentElement("afterbegin", createGithubButton(entry.getAttribute('data-gid')!))
         })
 }
 
@@ -31,11 +31,11 @@ function createGithubButton(id: string): Element {
         el.innerText = "Saving..."
         try {
             const comment = document.querySelector(`.js-timeline-item[data-gid="${id}"]`)
-            const commentBody = comment.querySelector('.js-comment-body').innerHTML
-            const title = document.querySelector('.js-issue-title').innerText
-            const commentUrl = comment.querySelector('.timeline-comment-header-text a.Link--secondary').href
-            const repoAuthor = document.querySelector('span.author a.url').innerText
-            const author = comment?.querySelector('a.author').innerText
+            const commentBody = comment!.querySelector('.js-comment-body')!.innerHTML
+            const title = document.querySelector('.js-issue-title')!.textContent!
+            const commentUrl = comment!.querySelector('.timeline-comment-header a.Link--secondary')!.href
+            const repoAuthor = document.querySelector('span.author a.url')!.textContent
+            const author = comment?.querySelector('a.author')?.textContent
             const payload: HighlightFragment = {
                 text: htmlToText(commentBody),
                 title,

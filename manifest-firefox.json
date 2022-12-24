@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+  "name": "Comments to Readwise",
+  "description": "Allows you to save comments to Readwise as it says on the tin",
+  "version": "2.0.0",
+  "homepage_url": "https://github.com/marcus-crane/comments-to-readwise",
+  "options_ui": {
+    "page": "src/options/index.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "c2r@utf9k.net"
+    }
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "src/assets/icon16.png",
+      "48": "src/assets/icon48.png",
+      "128": "src/assets/icon128.png"
+    },
+    "default_title": "Comments to Readwise"
+  },
+  "icons": {
+    "16": "src/assets/icon16.png",
+    "48": "src/assets/icon48.png",
+    "128": "src/assets/icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "https://hn.algolia.com/",
+    "https://readwise.io/"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "assets/content-script-loader.main.ts.c1a3e174.d53becca.js"
+      ],
+      "matches": [
+        "*://github.com/*/*/issues/*",
+        "*://github.com/*/*/pull/*",
+        "*://news.ycombinator.com/item?id=*",
+        "*://old.reddit.com/r/*/comments/*"
+      ]
+    }
+  ]
+}

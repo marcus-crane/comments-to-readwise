@@ -2,15 +2,10 @@
   "manifest_version": 2,
   "name": "Comments to Readwise",
   "description": "Allows you to save comments to Readwise as it says on the tin",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "homepage_url": "https://github.com/marcus-crane/comments-to-readwise",
   "options_ui": {
     "page": "src/options/index.html"
-  },
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "c2r@utf9k.net"
-    }
   },
   "browser_action": {
     "default_icon": {

@@ -49,7 +49,7 @@ In the meantime, you can download the `xpi` extension file from [the latest rele
 
 You can manually load the extension by going to `about:addons`, clicking "Extensions" and then under the cog icon on the right, select "Install Add-on From File..."
 
-With the file picker open, select `comments-to-readwise-2.0.0.xpi` and you should now have the extension installed.
+With the file picker open, select `comments-to-readwise-<version>.xpi` and you should now have the extension installed.
 
 From there, make sure you select the extension and enter your API token under the Preferences tab in order for it to function.
 

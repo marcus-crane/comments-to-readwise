@@ -25,7 +25,7 @@ Those changes are the following:
 - "manifest_version": 3,
   "name": "Comments to Readwise",
   "description": "Allows you to save comments to Readwise as it says on the tin",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "homepage_url": "https://github.com/marcus-crane/comments-to-readwise",
 - "options_page": "src/options/index.html",
 + "options_ui": {

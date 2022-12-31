@@ -1,6 +1,7 @@
 # Comments to Readwise
 
 > [Install from the Chrome Web Store](https://chrome.google.com/webstore/detail/mbpckcijlikkkakedodgpgkdmgbdogmp)
+
 > [Install from the Firefox Addon Store](https://addons.mozilla.org/en-US/firefox/addon/comments-to-readwise/)
 
 ![](./docs/example.png)

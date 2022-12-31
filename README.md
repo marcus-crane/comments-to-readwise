@@ -1,6 +1,7 @@
 # Comments to Readwise
 
 > [Install from the Chrome Web Store](https://chrome.google.com/webstore/detail/mbpckcijlikkkakedodgpgkdmgbdogmp)
+> [Install from the Firefox Addon Store](https://addons.mozilla.org/en-US/firefox/addon/comments-to-readwise/)
 
 ![](./docs/example.png)
 
@@ -39,20 +40,6 @@ At present, the extension only runs on the initial comment page for a submission
 
 It won't work if you go to the direct link for a comment, such that the original story and author isn't visible on the page.
 
-## Firefox Users
+## Reminder for myself re: Firefox
 
-Support for Firefox has been hacked in by building a V3 extension and modifying down to Manifest V2 by hand.
-
-At present, the extension has been submitted to the Firefox Addon Store and is undergoing review.
-
-In the meantime, you can download the `xpi` extension file from [the latest release](https://github.com/marcus-crane/comments-to-readwise/releases)
-
-You can manually load the extension by going to `about:addons`, clicking "Extensions" and then under the cog icon on the right, select "Install Add-on From File..."
-
-With the file picker open, select `comments-to-readwise-<version>.xpi` and you should now have the extension installed.
-
-From there, make sure you select the extension and enter your API token under the Preferences tab in order for it to function.
-
-## Reminder for myself
-
-XPI is created by bundling the extension, replacing with attributes from `manifest-firefox.json` (see `NOTE_FOR_FIREFOX_REVIEWERS.md`) and then signed with [web-ext sign](https://github.com/mozilla/web-ext)
+The existing hacky XPI is created by bundling the extension, replacing with attributes from `manifest-firefox.json` (see `NOTE_FOR_FIREFOX_REVIEWERS.md`) and then signed with [web-ext sign](https://github.com/mozilla/web-ext)
